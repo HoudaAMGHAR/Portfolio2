@@ -1,0 +1,166 @@
+# Prompt pour Cursor - Implémentation d'un système d'envoi d'emails pour Portfolio
+
+## Contexte
+Je souhaite implémenter un système d'envoi d'emails fonctionnel pour le formulaire de contact de mon portfolio.
+
+## Objectif
+Créer une solution complète et robuste d'envoi d'emails qui fonctionne en production, avec validation, gestion d'erreurs et retours utilisateur appropriés.
+
+## Stack technique recommandée
+- **Backend**: Node.js avec Express ou Next.js API Routes
+- **Service d'envoi**: Nodemailer avec Gmail ou service SMTP, ou alternative (Resend, SendGrid)
+- **Validation**: Zod ou Yup pour validation côté serveur
+- **Frontend**: React avec gestion d'état pour le formulaire
+
+## Spécifications détaillées
+
+### 1. Formulaire Frontend
+```
+Créer un formulaire de contact avec les champs suivants :
+- Nom (requis, min 2 caractères)
+- Email (requis, format email valide)
+- Sujet (requis, min 3 caractères)
+- Message (requis, min 10 caractères)
+- Bouton d'envoi avec états : normal, loading, success, error
+```
+
+**Fonctionnalités requises :**
+- Validation en temps réel des champs
+- Messages d'erreur clairs sous chaque champ
+- Désactivation du bouton pendant l'envoi
+- Animation de chargement pendant l'envoi
+- Message de succès/erreur après soumission
+- Réinitialisation du formulaire après succès
+- Protection anti-spam (captcha ou honeypot recommandé)
+
+### 2. API Backend (Route d'envoi)
+
+**Endpoint requis :**
+```
+POST /api/contact ou /api/send-email
+```
+
+**Fonctionnalités à implémenter :**
+
+1. **Validation des données entrantes**
+   - Vérifier tous les champs requis
+   - Valider le format email
+   - Nettoyer les données (sanitization)
+   - Limiter la longueur des champs
+
+2. **Rate limiting**
+   - Limiter à 3 emails par IP par heure
+   - Bloquer les requêtes suspectes
+
+3. **Configuration SMTP sécurisée**
+   - Utiliser des variables d'environnement pour les credentials
+   - Configurer Nodemailer correctement
+   - Gérer les timeouts et erreurs de connexion
+
+4. **Template d'email**
+   - Email HTML bien formaté
+   - Inclure toutes les informations du formulaire
+   - Design responsive
+   - Inclure l'IP de l'expéditeur (pour sécurité)
+
+5. **Gestion des erreurs**
+   - Codes HTTP appropriés (200, 400, 500, 429)
+   - Messages d'erreur descriptifs
+   - Logging des erreurs serveur
+   - Ne pas exposer d'informations sensibles
+
+### 3. Configuration environnement
+
+**Créer un fichier .env avec :**
+```
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USER=votre-email@gmail.com
+SMTP_PASSWORD=votre-mot-de-passe-application
+RECIPIENT_EMAIL=email-destination@domain.com
+NODE_ENV=production
+```
+
+**Instructions pour Gmail :**
+- Activer l'authentification à 2 facteurs
+- Générer un mot de passe d'application
+- Inclure les instructions dans le README
+
+### 4. Sécurité
+
+**Mesures obligatoires :**
+- Validation stricte côté serveur (ne jamais faire confiance au client)
+- Protection CSRF si nécessaire
+- Headers de sécurité appropriés
+- Rate limiting par IP
+- Sanitization des inputs (prévention XSS)
+- Honeypot field pour bloquer les bots
+- Vérification du Content-Type des requêtes
+- CORS configuré correctement
+
+### 5. Tests et validation
+
+**Avant de livrer, tester :**
+- [ ] Envoi d'email réussi avec données valides
+- [ ] Validation des erreurs pour chaque champ
+- [ ] Rate limiting fonctionnel
+- [ ] Messages d'erreur appropriés côté client
+- [ ] Animation de loading visible
+- [ ] Réinitialisation après succès
+- [ ] Fonctionnement sur mobile
+- [ ] Email reçu avec bon formatage
+- [ ] Protection anti-spam active
+- [ ] Variables d'environnement bien chargées
+
+### 6. Livrables
+
+**Fichiers à créer/modifier :**
+1. `components/ContactForm.jsx` - Composant formulaire React
+2. `api/contact.js` ou `pages/api/contact.js` - Route API
+3. `.env.example` - Template de configuration
+4. `lib/email.js` - Utilitaire d'envoi d'emails
+5. `lib/validation.js` - Schémas de validation
+6. `README_EMAIL_SETUP.md` - Documentation d'installation
+
+### 7. Documentation requise
+
+**Inclure dans le README :**
+- Instructions de configuration SMTP
+- Comment obtenir un mot de passe d'application Gmail
+- Variables d'environnement nécessaires
+- Comment tester localement
+- Alternatives à Gmail (Resend, SendGrid)
+- Troubleshooting des erreurs communes
+
+## Instructions spéciales pour Cursor
+
+1. **Utilise les meilleures pratiques** actuelles pour chaque technologie
+2. **Gère tous les cas d'erreur** possibles avec messages clairs
+3. **Commente le code** aux endroits complexes
+4. **Crée un code production-ready**, pas de placeholders
+5. **Optimise les performances** (debouncing, validation efficace)
+6. **Assure l'accessibilité** (labels, aria-labels, focus management)
+7. **Teste chaque fonctionnalité** avant de considérer terminé
+8. **Fournis des messages utilisateur** clairs et en français
+
+## Alternative recommandée si SMTP complexe
+
+Si Nodemailer pose problème, suggérer l'utilisation de :
+- **Resend** (API simple, 100 emails/jour gratuit)
+- **SendGrid** (API robuste, 100 emails/jour gratuit)
+- **EmailJS** (Solution frontend uniquement, facile mais moins sécurisé)
+
+Implémenter la solution la plus fiable et maintenable.
+
+## Critères de succès
+
+✅ L'email arrive bien dans la boîte de réception
+✅ Aucune erreur console ou serveur en production
+✅ Le formulaire est intuitif et responsive
+✅ Les erreurs sont gérées gracieusement
+✅ Le code est sécurisé et optimisé
+✅ La documentation permet à quelqu'un d'autre de configurer facilement
+
+---
+
+**Important** : Prioriser la fiabilité et la sécurité avant tout. Un système d'envoi d'email qui fonctionne 100% du temps vaut mieux qu'un système complexe qui échoue.

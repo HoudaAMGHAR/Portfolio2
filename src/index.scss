@@ -1,0 +1,296 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.1rem !important;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace !important;
+  font-size: 1rem !important;
+}.profile-photo {
+  width: 25%;                // pourcentage de la largeur du conteneur
+  aspect-ratio: 1 / 1;       // maintient le ratio carré (hauteur = largeur)
+  border-radius: 50%;        // cercle parfait
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 20px auto;  // centré + espace
+  border: 4px solid #ffffff; // contour propre
+  box-shadow: 0 5px 18px rgba(0,0,0,0.18); // ombre douce
+}
+
+.main-container {
+  position: relative;
+  background-color: #0d1116;
+
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #5000ca;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+
+p, a, h1, h2, h3, h4, h5, label, button {
+  color: white;
+  font-family: "Lato", sans-serif;
+}
+
+.navigation-bar {
+  justify-content: space-between;
+  background-color: #0d1116;
+
+  button {
+    font-size: 1.1rem;
+    font-family: "Lato", sans-serif;
+    text-transform: initial;
+    padding: 6px 10px;
+  }
+
+  svg {
+    cursor: pointer;
+  }
+}
+
+.navigation-bar-responsive {
+  span, p {
+    color: #0d1116;
+    font-family: "Lato", sans-serif;
+  }
+}
+
+.container {
+  margin-top: 64px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-image {
+  width: 100%;
+  height: 450px;
+
+  img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+  }
+}
+
+.mobile-menu-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-weight: bold;
+}
+
+.items-container {
+  padding: 5% 10%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.light-mode {
+  background-color: #f8f9fa;
+
+  .navigation-bar {
+    background-color: #f8f9fa;
+  }
+
+  p, a, h1, h2, h3, h4, h5, label, button {
+    color: #0d1116;
+  }
+
+  a:hover {
+    color: #5000ca;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+  }
+
+  .navigation-bar svg {
+    color: #0d1116;
+  }
+
+  .about-section {
+    background-image: url("./assets/images/bg-light.png");
+  }
+
+  .skills-container svg {
+    color: #0d1116;
+  }
+
+  .chip {
+    background-color: rgba(0, 0, 0, 0.08);
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+  }
+
+  .vertical-timeline::before {
+    background-color: rgba(0, 0, 0, 0.08);
+  }
+
+  .vertical-timeline--animate .vertical-timeline-element-content.bounce-in {
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+  }
+
+  .vertical-timeline--two-columns .vertical-timeline-element-content .vertical-timeline-element-date {
+    color: gray;
+  }
+
+  .vertical-timeline-element-content-arrow {
+    border-right: 7px solid rgba(0, 0, 0, 0.08) !important;
+  }
+
+  .flex-chips .chip-title {
+    color: #0d1116;
+  }
+}
+
+@media screen {
+  @media (max-width: 768px) {
+    .items-container {
+      padding: 5% 5%;
+    }
+  }
+}
+/* === HERO / SECTION INTRO (style comme l’image) === */
+
+#contact {
+  background:#0000;
+  padding: 6rem 0 4rem 0;
+  text-align: center;
+
+  .items-container {
+    padding: 3rem 10%;
+  }
+
+  h1, h3 {
+    font-family: "Lato", sans-serif;
+    font-weight: 800;
+    line-height: 1.2;
+  }
+
+  h1, h3 {
+    font-size: 3.2rem;
+
+    @media (max-width: 768px) {
+      font-size: 2.3rem;
+    }
+  }
+
+  .intro-subtitle {
+    font-size: 1.3rem;
+    opacity: 0.85;
+    margin-top: 1rem;
+
+    @media (max-width: 768px) {
+      font-size: 1.1rem;
+    }
+  }
+
+  .intro-buttons {
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
+/* === Boutons stylisés façon hero === */
+
+.button-primary {
+  padding: 12px 22px;
+  border-radius: 12px;
+  border: 2px solid rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(6px);
+  color: white;
+  font-weight: bold;
+  transition: 0.3s ease;
+  font-size: 1rem;
+
+  &:hover {
+    background: rgba(255,255,255,0.15);
+    border-color: rgba(255,255,255,0.4);
+    color: whitrgba(10,10,10,0.7)e;
+  }
+}
+
+.button-secondary {
+  padding: 12px 22px;
+  border-radius: 12px;
+  background: linear-gradient(45deg, #9333ea, #c266ff);
+  color: white;
+  font-weight: bold;
+  border: none;
+  transition: 0.3s ease;
+  font-size: 1rem;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+/* === BOX DE CONTACT === */
+
+.contact-info-box {
+  background: #0000 ortant;
+  border: 1px solid rgba(0,0,0,0);
+  border-radius: 18px !important;
+  padding: 40px !important;
+  backdrop-filter: blur(6px);
+  margin-top: 3rem;
+  width: 75% !important;
+  max-width: 700px;
+
+  @media (max-width: 768px) {
+    width: 90% !important;
+    padding: 28px !important;
+  }
+
+  h3 {
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  a {
+    color: white;
+    opacity: 0.9;
+
+    &:hover {
+      opacity: 1;
+      color: #9333ea;
+    }
+  }
+
+  .MuiSvgIcon-root {
+    vertical-align: middle;
+  }
+}
+
+/* === Icônes GitHub & LinkedIn === */
+#contact .MuiLink-root {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 1rem;
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 8px 14px;
+  border-radius: 12px;
+  transition: 0.3s;
+
+  &:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: rgba(255,255,255,0.4);
+  }
+}
