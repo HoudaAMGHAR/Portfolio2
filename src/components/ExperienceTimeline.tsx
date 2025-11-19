@@ -25,8 +25,8 @@ function ExperienceTimeline() {
            
           >
      
-            <h3 className="vertical-timeline-element-title purple">Data Analyst (Alternance)</h3>
-            <h4 className="vertical-timeline-element-subtitle purple">Centre Hospitalier de Rambouilliet, Paris</h4>
+            <h3 className="vertical-timeline-element-title">Data Analyst (Alternance)</h3>
+            <h4 className="vertical-timeline-element-subtitle">Centre Hospitalier de Rambouilliet, Paris</h4>
             <p>
               <ul>
                 <li>Conception de plus de 25 tableaux de bord interactifs sous Power BI et SAP BO Webi sur l’activité hospitalière : urgences, séjours, taux d’occupation, passages au bloc et consultations externes.</li>
