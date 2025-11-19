@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.e76f0785.css",
-    "main.js": "/static/js/main.de1e9948.js",
-    "static/js/453.b05d8aa5.chunk.js": "/static/js/453.b05d8aa5.chunk.js",
-    "static/media/bg-light.png": "/static/media/bg-light.bac0efb485244a522981.png",
-    "static/media/bg-dark.png": "/static/media/bg-dark.f420c6b8458af72de935.png",
-    "static/media/profile-photo.jpg": "/static/media/profile-photo.1dcdb94225b3f3bf0d21.jpg",
-    "index.html": "/index.html",
-    "main.e76f0785.css.map": "/static/css/main.e76f0785.css.map",
-    "main.de1e9948.js.map": "/static/js/main.de1e9948.js.map",
-    "453.b05d8aa5.chunk.js.map": "/static/js/453.b05d8aa5.chunk.js.map"
+    "main.css": "/HoudaAMGHAR/Portfolio2/static/css/main.00cd3597.css",
+    "main.js": "/HoudaAMGHAR/Portfolio2/static/js/main.6a22f754.js",
+    "static/js/453.b05d8aa5.chunk.js": "/HoudaAMGHAR/Portfolio2/static/js/453.b05d8aa5.chunk.js",
+    "static/media/bg-light.png": "/HoudaAMGHAR/Portfolio2/static/media/bg-light.bac0efb485244a522981.png",
+    "static/media/bg-dark.png": "/HoudaAMGHAR/Portfolio2/static/media/bg-dark.f420c6b8458af72de935.png",
+    "static/media/profile-photo.jpg": "/HoudaAMGHAR/Portfolio2/static/media/profile-photo.1dcdb94225b3f3bf0d21.jpg",
+    "index.html": "/HoudaAMGHAR/Portfolio2/index.html",
+    "main.00cd3597.css.map": "/HoudaAMGHAR/Portfolio2/static/css/main.00cd3597.css.map",
+    "main.6a22f754.js.map": "/HoudaAMGHAR/Portfolio2/static/js/main.6a22f754.js.map",
+    "453.b05d8aa5.chunk.js.map": "/HoudaAMGHAR/Portfolio2/static/js/453.b05d8aa5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e76f0785.css",
-    "static/js/main.de1e9948.js"
+    "static/css/main.00cd3597.css",
+    "static/js/main.6a22f754.js"
   ]
 }
