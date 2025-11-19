@@ -30,7 +30,7 @@ function Contact() {
     
           {/* Boutons d'action (À propos de moi & Mon CV) - Vous pouvez les styliser davantage */}
           <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2 }}>
-          <Link href="/cv_houda_amghar.pdf"
+          <Link href="Data_analyst_junior.pdf" 
           
           download underline="none">
   <button className="button-secondary">
