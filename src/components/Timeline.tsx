@@ -16,7 +16,7 @@ function Timeline() {
             className="vertical-timeline-element--work"
             contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
             contentArrowStyle={{ borderRight: '7px solid  white' }}
-            date="sep 2023 - sep  2025"
+            date="Sept 2024– Août 2025"
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
@@ -30,7 +30,7 @@ function Timeline() {
          
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="sep 2021 - sep 2023"
+            date="Sept 2021– Août 2024"
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
@@ -45,15 +45,17 @@ function Timeline() {
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="sep 2020 - sep 2021"
+            date="Sept 2015– Août 2018"
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">L1 Informatique Système d'information</h3>
-            <h4 className="vertical-timeline-element-subtitle">Université Sétif 1 Ferhat Abbas</h4>
+            <h3 className="vertical-timeline-element-title">Infirmière de santé publique</h3>
+            <h4 className="vertical-timeline-element-subtitle">Institut supérieur de formation supérieur Paramédical</h4>
             
             <p> 
-               Formation pluridisciplinaire combinant algorithmique, programmation, structures de données, mathématiques appliquées, analyse numérique et statistiques pour développer une double compétence en sciences informatiques et mathématiques.
+               Formation en soins infirmiers comprenant la démarche clinique, les soins techniques et thérapeutiques,
+                la gestion des urgences et soins critiques, ainsi que la prévention, l’éducation du patient et le travail en
+                équipe pluridisciplinaire.
             </p>
           </VerticalTimelineElement>
         </VerticalTimeline>
