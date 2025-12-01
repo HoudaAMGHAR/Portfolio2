@@ -18,7 +18,7 @@ function ExperienceTimeline() {
             className="vertical-timeline-element--work"
             contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
             contentArrowStyle={{ borderRight: '7px solid  white' }}
-            date="Septembre 2024– Août 2025"
+            date="Septembre 2024– Septembre 2025"
  
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
@@ -63,22 +63,58 @@ function ExperienceTimeline() {
  
           </VerticalTimelineElement>
  
+          
+
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="Juin 2023 - Août  2023"
+            contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
+            contentArrowStyle={{ borderRight: '7px solid  white' }}
+            date="Septembre 2020 – Août 2021"
+ 
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
+           
           >
-            <h3 className="vertical-timeline-element-title">Développeur Full Stack Junior(Stage)</h3>
-            <h4 className="vertical-timeline-element-subtitle">Wikeys, Saint Denis -Paris</h4>
+     
+            <h3 className="vertical-timeline-element-title">Infirmière de réanimation</h3>
+            <h4 className="vertical-timeline-element-subtitle">CHU de Sétif, Algérie</h4>
             <p>
-              <li>Développement d'une application web en PHP (Laravel) avec interface Angular</li>
-              <li>Conception et optimisation de requêtes SQL pour l'exploitation des données</li>
-               <li>Mise en place de scripts d'automatisation ETL et création de tableaux de bord simples</li>
-                <li>Collaboration en équipe avec Git et méthodes agiles</li>
-                Outils :
-                <p><strong>Outils :</strong> PHP (Laravel), Angular, SQL, Python/Bash pour ETL, Power BI, Git, Jira/Trello (méthodes agiles).</p>
+              <ul>
+                <li>Gestion et surveillance des dispositifs invasifs : sondes, cathéters centraux, drains, lignes artérielles, pompes
+                    et seringues automatiques.</li>
+                <li>Réalisation d’actes techniques spécialisés : aspirations trachéales, soins de trachéotomie, prélèvements
+                    artériels/veineux, gestion de la ventilation assistée.</li>
+                <li>Mise en œuvre des traitements complexes : titration des drogues vasoactives, adaptation des perfusions
+                    continues, préparation et administration de thérapeutiques d’urgence.
+                </li>
+              </ul>
             </p>
+ 
+          </VerticalTimelineElement>
+
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
+            contentArrowStyle={{ borderRight: '7px solid  white' }}
+            date="Septembre 2018 - Août 2020"
+ 
+            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
+            icon={<FontAwesomeIcon icon={faBriefcase} />}
+           
+          >
+     
+            <h3 className="vertical-timeline-element-title">Infirmière en USC post-opératoire</h3>
+            <h4 className="vertical-timeline-element-subtitle">Centre de lutte contre le cancer, Sétif-Algérie</h4>
+            <p>
+              <ul>
+                <li>Surveillance rapprochée des constantes, de la douleur et de l’état de conscience après intervention.</li>
+                <li>Gestion des drains, pansements, perfusions et contrôle des effets secondaires liés à l’anesthésie.</li>
+                <li>Mise en œuvre du protocole post-opératoire : mobilisation précoce, prévention des complications, édu
+                      ation du patient et coordination avec l’équipe chirurgicale.
+                </li>
+              </ul>
+            </p>
+ 
           </VerticalTimelineElement>
  
         </VerticalTimeline>
